@@ -1,0 +1,596 @@
+ * @author jose daniel
+ */
+public class DigiteDosnumeros {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        int resultado = numero1 + numero2;
+
+        System.out.println("Resultado: " + resultado);
+    }
+}
+
+
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class NombreEdadSalario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Ingrese su nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        System.out.print("Ingrese su salario: ");
+        double salario = scanner.nextDouble();
+
+        
+        double salarioAjustado = salario;
+
+        if (edad < 17) {
+            System.out.println("Lo siento, no puede trabajar debido a su edad.");
+        } else if (edad >= 18 && edad <= 50) {
+            salarioAjustado *= 1.05; 
+        } else if (edad >= 51 && edad <= 60) {
+            salarioAjustado *= 1.10; 
+        } else {
+            salarioAjustado *= 1.15; 
+        }
+
+        
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Salario original: $" + salario);
+        System.out.println("Salario ajustado: $" + salarioAjustado);
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class caracterEsunDigito {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un carácter: ");
+        char caracter = scanner.next().charAt(0);
+
+        if (caracter >= '0' && caracter <= '9') {
+            System.out.println("El carácter es un dígito.");
+        } else if (caracter >= 'A' && caracter <= 'Z') {
+            System.out.println("El carácter es una letra mayúscula.");
+        } else if (caracter >= 'a' && caracter <= 'z') {
+            System.out.println("El carácter es una letra minúscula.");
+        } else {
+            System.out.println("El carácter no es un dígito ni una letra.");
+        }
+
+    }
+}
+
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class ceroAdiez {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       
+       System.out.print("Agrega un numero: ");
+       int nota = scanner.nextInt();
+       
+        if (nota < 0 || nota > 10) {
+            System.out.println("Insuficiente");
+        } else if (nota < 4) {
+            System.out.println("Insuficiente");
+        } else if (nota < 6) {
+            System.out.println("suficiente");
+        } else if (nota < 8) {
+            System.out.println("bien");
+        } else if (nota < 10) {
+            System.out.println("notable");
+        }
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class descuentoDeveinte {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el valor de compra: ");
+        double valorCompra = scanner.nextDouble();
+
+        if (valorCompra > 300) {
+            double descuento = valorCompra * 0.20;
+            double totalAPagar = valorCompra - descuento;
+
+            System.out.println("El descuento es de: " + descuento);
+            System.out.println("El total a pagar es: " + totalAPagar);
+        } else {
+            System.out.println("No aplica descuento. El total a pagar es: " + valorCompra);
+        }
+
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class diasDelMeses {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+         System.out.print("Ingresa un número entre 1 y 12 para representar un mes: ");
+         int mes = scanner.nextInt();
+         
+         if (mes == 1){
+             System.out.println("enero cuenta con 31 dias");
+         }
+         if (mes == 2){
+             System.out.println("febrero cuenta con 28 dias");
+         }
+         if (mes == 3){
+             System.out.println("marzo cuenta con 31 dias");
+         }
+         if (mes == 4){
+             System.out.println("abril cuenta con 30 dias");
+         }
+         if (mes == 5){
+             System.out.println("mayo cuenta con 31 dias");
+         }
+         if (mes == 6){
+             System.out.println("junio cuenta con 30 dias");
+         }
+         if (mes == 7){
+             System.out.println("julio cuenta con 31 dias");
+         }
+         if (mes == 8){
+             System.out.println("agosto cuenta con 31 dias");
+         }
+         if (mes == 9){
+             System.out.println("septiembre cuenta con 30 dias");
+         }
+         if (mes == 10){
+             System.out.println("octubre cuenta con 31 dias");
+         }
+         if (mes == 11){
+             System.out.println("noviembre cuenta con 30 dias");
+         }
+         if (mes == 12){
+             System.out.println("diciembre cuenta con 31 dias");
+         }
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class digiteEdadMayoroMenor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+        
+        if (edad >= 18) {
+            System.out.println("Usted es mayor de edad.");
+        } else {
+            System.out.println("Usted es menor de edad.");
+        }
+        
+
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class importeCifras {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        int cifras = contarCifras(numero);
+
+        System.out.println("Número ingresado: " + numero);
+        System.out.println("Cifras esperadas: " + cifras);
+    }
+
+    // Función para contar las cifras en un número
+    public static int contarCifras(int numero) {
+        if (numero == 0) {
+            return 1; 
+        }
+        
+        int contador = 0;
+        while (numero != 0) {
+            numero = numero / 10;
+            contador++;
+        }
+        
+        return contador;
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class importeMayusculaMinuscula {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese  Letra:");
+        char letra = scanner.next().charAt(0);
+        
+        if (Character.isUpperCase(letra))
+            System.out.println("Esta letra es mayuscula");
+        else if (Character.isLowerCase(letra))
+            System.out.println("Esta letra es minuscula");
+    }
+    }
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class imprimaNumeroMayor {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        System.out.print("Ingrese el tercer número: ");
+        int numero3 = scanner.nextInt();
+
+        int mayor = numero1;  
+
+        if (numero2 > mayor) {
+            mayor = numero2;  
+        }
+
+        if (numero3 > mayor) {
+            mayor = numero3; 
+        }
+
+        System.out.println("El número mayor es: " + mayor);
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class multiploDe8 {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        if (numero % 8 == 0) {
+            System.out.println("El número " + numero + " es múltiplo de 8.");
+        } else {
+            System.out.println("El número " + numero + " no es múltiplo de 8.");
+        }
+    }
+}
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class multiploDeOtro {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        if (numero1 % numero2 == 0) {
+            System.out.println(numero1 + " es múltiplo de " + numero2);
+        } else {
+            System.out.println(numero1 + " no es múltiplo de " + numero2);
+        }
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class numeroCrecienteDecreciente {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        System.out.print("Ingrese el tercer número: ");
+        int numero3 = scanner.nextInt();
+
+        if (numero1 < numero2 && numero2 < numero3) {
+            System.out.println("Está en orden creciente.");
+        } else if (numero1 > numero2 && numero2 > numero3) {
+            System.out.println("Está en orden decreciente.");
+        } else {
+            System.out.println("No aumenta ni disminuye el orden.");
+        }
+    }
+}
+
+
+
+ * @author jose daniel
+ */
+public class numeroImporte {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un número: ");
+        double numero = scanner.nextDouble();
+
+        if (numero > 0) {
+            System.out.println("El número es Positivo.");
+        } else if (numero < 0) {
+            System.out.println("El número es Negativo.");
+        } else {
+            System.out.println("El número es Cero.");
+        }
+    }
+}
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class numeroParOimpar {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("El número es Par.");
+        } else {
+            System.out.println("El número es Impar.");
+        }
+    }
+}
+
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class numerosEimprima {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        System.out.print("Ingrese el tercer número: ");
+        int numero3 = scanner.nextInt();
+
+        if (numero1 == numero2 && numero2 == numero3) {
+            System.out.println("Todos los números son iguales.");
+        } else if (numero1 != numero2 && numero2 != numero3 && numero1 != numero3) {
+            System.out.println("Todos los números son diferentes.");
+        } else {
+            System.out.println("Ninguno de los dos es igual o diferente.");
+        }
+    }
+ 
+}
+
+
+
+ * @author jose daniel
+ */
+public class pedirHora {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Hora: ");
+        int Hora = scanner.nextInt();
+        
+        System.out.print("Minuto: ");
+        int Minuto = scanner.nextInt();
+        
+        System.out.println("Segundo");
+        int Segundo = scanner.nextInt();
+        
+        System.out.println("La hora es: " + Hora + ":" + Minuto + ":" + Segundo);
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class programaCalculeMasaCorporal {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario.
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario su peso y altura.
+        System.out.println("Ingresa tu peso : ");
+        double peso = scanner.nextDouble();
+
+        System.out.println("Ingresa tu altura : ");
+        double altura = scanner.nextDouble();
+
+        // Calcular el índice de masa corporal.
+        double imc = peso / (altura * altura);
+
+        // Imprimir el índice de masa corporal y el estado de la persona.
+        System.out.println("Tu  masa corporal es: " + imc);
+
+        if (imc < 16) {
+            System.out.println("Tienes un peso inferior.");
+        } else if (imc < 18) {
+            System.out.println("Tienes un peso bajo.");
+        } else if (imc < 25) {
+            System.out.println("Tienes un peso saludable.");
+        } else if (imc < 30) {
+            System.out.println("Tienes sobrepeso.");
+        } else if (imc < 35) {
+            System.out.println("Tienes obesidad. ");
+        } else if (imc < 40) {
+            System.out.println("estas muy gordo.");
+        } else {
+            System.out.println("estas como una ballena");
+        }
+    }
+}
+
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class temperaturaClima {
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la temperatura: ");
+        double temperatura = scanner.nextDouble();
+
+        if (temperatura <= 10) {
+            System.out.println("El clima es: Frio");
+        } else if (temperatura > 10 && temperatura <= 20) {
+            System.out.println("El clima es: Nublado");
+        } else if (temperatura > 20 && temperatura <= 30) {
+            System.out.println("El clima es: Caluroso");
+        } else {
+            System.out.println("El clima es: Tropical");
+        }
+    }
+}
+
+
+
+/**
+ *
+ * @author jose daniel
+ */
+public class zodiaco {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el día de su nacimiento (1-31): ");
+        int dia = scanner.nextInt();
+
+        System.out.print("Ingrese el mes de su nacimiento (1-12): ");
+        int mes = scanner.nextInt();
+
+        String signoZodiacal = determinarSignoZodiacal(dia, mes);
+
+        if (signoZodiacal != null) {
+            System.out.println("Tu signo zodiacal es: " + signoZodiacal);
+        } else {
+            System.out.println("Fecha de nacimiento no válida.");
+        }
+
+        scanner.close();
+    }
+
+    public static String determinarSignoZodiacal(int dia, int mes) {
+        if ((mes == 3 && dia >= 21) || (mes == 4 && dia <= 19)) {
+            return "Aries";
+        } else if ((mes == 4 && dia >= 20) || (mes == 5 && dia <= 20)) {
+            return "Tauro";
+        } else if ((mes == 5 && dia >= 21) || (mes == 6 && dia <= 20)) {
+            return "Géminis";
+        } else if ((mes == 6 && dia >= 21) || (mes == 7 && dia <= 22)) {
+            return "Cáncer";
+        } else if ((mes == 7 && dia >= 23) || (mes == 8 && dia <= 22)) {
+            return "Leo";
+        } else if ((mes == 8 && dia >= 23) || (mes == 9 && dia <= 22)) {
+            return "Virgo";
+        } else if ((mes == 9 && dia >= 23) || (mes == 10 && dia <= 22)) {
+            return "Libra";
+        } else if ((mes == 10 && dia >= 23) || (mes == 11 && dia <= 21)) {
+            return "Escorpio";
+        } else if ((mes == 11 && dia >= 22) || (mes == 12 && dia <= 21)) {
+            return "Sagitario";
+        } else if ((mes == 12 && dia >= 22) || (mes == 1 && dia <= 19)) {
+            return "Capricornio";
+        } else if ((mes == 1 && dia >= 20) || (mes == 2 && dia <= 18)) {
+            return "Acuario";
+        } else if ((mes == 2 && dia >= 19) || (mes == 3 && dia <= 20)) {
+            return "Piscis";
+        } else {
+            return null; 
+        }
+    }
+}
+
+
